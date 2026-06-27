@@ -20,4 +20,6 @@ jobs:
 
       - name: files list
         run: ls
+
+      - name: disk usage  
         run: df -h
