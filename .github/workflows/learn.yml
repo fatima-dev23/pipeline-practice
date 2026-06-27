@@ -1,0 +1,22 @@
+#name
+name: First Pipeline
+
+#when start
+on:
+  push:
+    branches:
+      - main
+
+#jobs
+jobs:
+  my-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print name
+        run: echo "fatima"
+
+      - name: today date
+        run: date
+
+      - name: files list
+        run: ls

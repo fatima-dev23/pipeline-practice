@@ -1,0 +1,16 @@
+#name
+name: Sayalni
+
+#when start
+on:
+  push:
+    branches:
+      - main
+
+#jobs
+jobs:
+  my-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hello World
+        run: echo "Hello World!"
