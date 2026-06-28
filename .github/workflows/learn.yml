@@ -36,7 +36,7 @@ jobs:
           echo "List all repo files"
           echo "List Hostname"
           ls -la
-          hostname -I
+          hostname
 
   third-job:
     runs-on: ubuntu-latest
