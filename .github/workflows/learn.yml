@@ -37,4 +37,11 @@ jobs:
           echo "List Hostname"
           ls -la
           hostname -I
+
+  third-job:
+    runs-on: ubuntu-latest
+    needs: second-job
+    steps:
+      - name: Show Username
+        run: uname
           
