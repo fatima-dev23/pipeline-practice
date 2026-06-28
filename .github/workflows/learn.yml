@@ -9,7 +9,7 @@ on:
 
 #jobs
 jobs:
-  my-job:
+  first-job:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
@@ -26,3 +26,15 @@ jobs:
 
       - name: disk usage  
         run: df -h
+
+  second-job:
+    runs-on: ubuntu-latest
+    needs: first-job
+    steps:
+      - name: Show Repo Files and Hostname
+        run: | 
+          echo "List all repo files"
+          echo "List Hostname"
+          ls -la
+          hostname -I
+          
